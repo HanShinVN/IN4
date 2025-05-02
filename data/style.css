@@ -1,0 +1,652 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  padding-top: 60px;
+}
+
+header {
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: rgba(17, 17, 17, 0.9); 
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+
+.nav-logo img {
+  height: 30px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #00aaff;
+  transition: 0.3s;
+}
+
+
+.nav-social {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-social img {
+  height: 45px;
+  width: 45px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-social img:hover {
+  opacity: 0.8;
+}
+
+
+.letter-fade {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeInChar 0.5s forwards;
+  transform: translateY(10px);
+}
+
+@keyframes fadeInChar {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15%;           
+  padding: 40px 20px;
+  height: 50vh;
+}
+
+.intro h1 {
+  font-size: clamp(32px, 6vw, 55px);
+  text-align: left;
+}
+
+
+.intro span {
+  font-weight: bold;
+  color: #fff;
+}
+
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 40px #00b3ff;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out; 
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px #00cfff;
+}
+
+.services {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.scroll-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.scroll-content {
+  display: flex;
+  gap: 20px;
+  animation: scroll-left 30s linear infinite;
+  width: max-content;
+}
+
+
+
+
+
+.cards {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 3%;
+  margin-bottom: 70px;
+}
+
+.card {
+  width: 330px;
+  height: 380px;
+  padding: 25px;
+  border-radius: 30px;
+  /* font-size: 14px; */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 5% 0;
+
+  background-size: 130% 130%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: transform 0.3s ease;
+   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.card p {
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-1 {
+  background-image: url("./img/Rectangle_1.png");
+  box-shadow: 0 0 40px #00ff00;
+}
+
+.card-2 {
+  background-image: url("./img/Rectangle_2.png");
+  box-shadow: 0 0 40px #007bff;
+}
+
+.card-3 {
+  background-image: url("./img/Rectangle_3.png");
+  box-shadow: 0 0 40px #ffcc00;
+}
+
+.card-4 {
+  background-image: url("./img/Rectangle_4.png");
+  box-shadow: 0 0 40px #aaa;
+}
+
+.download-btn {
+  background-color: #003cff;
+  color: #fff;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #0028b8;
+  transform: scale(1.05);
+}
+
+.Experience, .education, .projects, .contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.Experience, .education, .projects, .contact {
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+
+
+.Experience-entry, .edu-entry {
+  display: flex;
+  gap: 10%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding: 5px 0;
+}
+
+.Experience-info, .edu-info {
+  max-width: 480px;
+  text-align: left;
+}
+
+.Experience-img {
+  width: 400px;
+  height: 280px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+/* Ảnh bên trong */
+.Experience-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease-in-out;
+}
+
+.Experience-img:hover {
+  transform: scale(1.1);
+}
+
+/* Text bên phải */
+.Experience-info, .edu-info {
+  max-width: 500px;
+  text-align: left;
+}
+
+.Experience-info h3 {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.Experience-info p {
+  margin: 4px 0;
+}
+
+
+
+.edu-entry {
+  display: flex;
+  gap: 15%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+.edu-img {
+  width: 400px;
+  height: 280px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.edu-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease-in-out;
+}
+
+.edu-img:hover {
+  transform: scale(1.05);
+}
+
+.edu-img:hover  {
+  transform: scale(1.1);
+}
+
+
+.edu-info {
+  max-width: 500px;
+  text-align: left;
+}
+
+.edu-info h3 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.edu-info p {
+  margin: 4px 0;
+}
+
+
+
+
+
+.projects {
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #000; /* tuỳ chỉnh nền */
+}
+
+.projects h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.project-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.project-scroll-content {
+  display: flex;
+  animation: project-scroll-left 35s linear infinite;
+  width: max-content;
+  gap: 40px;
+  align-items: stretch;
+}
+
+@keyframes project-scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+.project-entry {
+  flex-shrink: 0;
+  width: 400px;
+  background: linear-gradient(to bottom right, #1e1e1e, #2c2c2c);
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-entry:hover {
+  transform: scale(1.05);
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+}
+
+.project-img img {
+  width: 100%;
+  height: 250px; /* Trước đó có thể là 200px */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease-in-out;
+}
+
+.project-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.project-info p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Dừng khi hover (tuỳ chọn) */
+
+
+
+
+
+/* Khối chứa form */
+form {
+  background: linear-gradient(145deg, #2c2c2c, #1a1a1a);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 8px 8px 16px #0a0a0a, -8px -8px 16px #333;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+form input,
+form textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  border-radius: 20px;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: inset 2px 2px 5px #111, inset -2px -2px 5px #333;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+form textarea {
+  height: 160px;
+  resize: none;
+}
+
+form input:hover,
+form textarea:hover {
+  transform: scale(1.08);
+  /* box-shadow: 0 0 60px #00cfff; */
+}
+
+
+form:hover {
+  transform: scale(1.01);
+  transition: transform 0.6s ease;
+}
+
+
+/* Nút gửi */
+form button {
+  background-color: #8000ff;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  align-self: center;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #a64dff;
+}
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  transition: transform 0.4s ease-in-out,
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+@media (max-width: 760px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1001;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #111;
+    width: 100vw; 
+    max-width: 100%;
+    padding: 20px 0;
+    position: fixed; 
+    top: 65px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  
+  .navbar li {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #222;
+  }
+  
+  .navbar li:last-child {
+    border-bottom: none;
+  }
+  
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    height: auto;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-entry {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }
+
+/* .animate {
+  opacity: 5;
+} */
+
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-delay-1 { transition-delay: 0.2s; }
+.scroll-delay-2 { transition-delay: 0.4s; }
+.scroll-delay-3 { transition-delay: 0.6s; }
+.scroll-delay-4 { transition-delay: 0.8s; }
+.scroll-delay-5 { transition-delay: 1s; }
